@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Itacolomi Restaurante</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__logo">
+      <img src="assets/images/LOGO.svg" alt="Logo do Itacolomi Restaurante" class="header__logo--image">
+      <div class="header__name">Olá, Ingrid!</div>
+    </div>
+
+    <div class="header__logout">
+      <img src="assets/images/Icon ionic-ios-log-out.svg" alt="Sair" class="header__logout--image">
+      <div class="header__logout-text">
+        Sair
+      </div>
+    </div>
+  </header>
+  <div class="container">
+    <div class="back">
+      <a href="cards.html" class="main__back">
+        <img src="/assets/images/Back.svg" alt="">
+      </a>
+
+    </div>
+  </div>
+  <main class="main__dois">
+    <div class="main__registro">
+      <div class="main__registro--header">
+        <img src="/assets/images/Bag.svg" alt="">
+        <h1 class="main__header">
+          Cadastrar produtos
+        </h1>
+      </div>
+
+      <div class="main__registro--text">
+        Etapa 1 de 2
+      </div>
+      <div class="main__registro--form">
+        <form class="main__form" id="main__form">
+          <input type="text" required name="name" id="name" placeholder="Nome do produto" class="form__registro"><br>
+          <input type="text" required name="description" id="description" placeholder="Descrição" class="form__registro"><br>
+          <input type="number" required name="value" id="value" placeholder="Valor (R$)" class="form__registro" min="1" step="any"><br>
+          <select name="category" required id="category" class="form__registro">
+          </select>
+      </div>
+      <div class="main__registro--form-radio">
+        <h3 class="form__radio-title">
+          Para quantas pessoas?
+        </h3>
+        <div class="form__radio">
+          <input type="radio" id="1" name="pessoas" value="1" checked="checked">
+          <label for="1">Serve 1 pessoa</label><br>
+          <input type="radio" id="2" name="pessoas" value="2">
+          <label for="2">Serve 2 pessoas</label><br>
+          <input type="radio" id="4" name="pessoas" value="4">
+          <label for="4">Família - até 4 pessoas</label>
+        </div>
+      </div>
+
+      <div class="main__registro--form-radio">
+        <h3 class="form__radio-title">
+          Disponibilidade
+        </h3>
+        <div class="form__radio">
+          <input type="radio" id="disponivel" name="disponibilidade" value="true" checked="checked">
+          <label for="disponivel">Produto disponível</label><br>
+          <input type="radio" id="indisponivel" name="disponibilidade" value="false">
+          <label for="indisponivel">Produto indisponível</label><br>
+        </div>
+      </div>
+
+      <div class="registro2">
+        <div class="main__registro--header">
+          <img src="/assets/images/Bag.svg" alt="">
+          <h1 class="main__header">
+            Cadastrar produtos
+          </h1>
+        </div>
+
+        <div class="main__registro--text">
+          Etapa 2 de 2
+        </div>
+
+        <h2 class="registro2__header">Selecione a foto do produto</h2>
+
+
+        <div class="drag">
+
+          <div class="registro__drag-bigger">
+            <div class="drag-capa">
+              <h4 class="drag-capa-text">
+                Capa
+              </h4>
+            </div>
+            <div class="drag-icon">
+              <img src="/assets/images/Upload.svg" alt=" upload">
+              <button class="drag-button">Anexar foto do produto</button>
+              <input type="file" id="file" hidden>
+              <h1 class="drag-text">Se preferir arraste e solte a foto.</h1>
+            </div>
+          </div>
+
+
+          <div class="registro__drag-smaller">
+
+            <div class="drag-smaller">
+              <div class="drag-icon"><img src="/assets/images/Upload.svg" alt=" upload"></div>
+              <button class="drag-button">Anexar foto do produto</button>
+              <input type="file" id="file" name="file" hidden>
+              <h1 class="drag-text">Se preferir arraste e solte a foto.</h1>
+            </div>
+            <div class="drag-smaller">
+              <div class="drag-icon"><img src="/assets/images/Upload.svg" alt=" upload"></div>
+              <button class="drag-button">Anexar foto do produto</button>
+              <h1 class="drag-text">Se preferir arraste e solte a foto.</h1>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="main__registro--button">
+        <button type="submit" form="main__form" value="submit" class="registro__button">
+          Cadastrar produto
+        </button>
+      </div>
+
+      </form>
+
+  </main>
+  <footer class="footer">
+    <div class="footer__content">
+      <div class="footer__content--text">
+        <p>
+          2022 | <span class="footer__span">Usemobile.</span> Todos direitos reservados.
+        </p>
+  </footer>
+  <script src="/assets/script/registro.js"></script>
+</body>
+
+</html>
