@@ -6,7 +6,23 @@ const API_CATEGORIES = 'https://bootcamp--use.herokuapp.com/categories';
 async function getProducts() {
   const data = await fetch(API_PRODUCTS).then((response) => response.json());
 
+  if (!data.length) {
+    showNotFound();
+  } else {
+    hideNotFound();
+  }
+
   return data;
+}
+
+function showNotFound() {
+  const notFound = document.querySelector('.main__notfound');
+  notFound.style.display = 'flex';
+}
+
+function hideNotFound() {
+  const notFound = document.querySelector('.main__notfound');
+  notFound.style.display = 'none';
 }
 
 function createCards(products) {
@@ -154,6 +170,7 @@ async function searchBar() {
     } = evt;
 
     if (!value) {
+      hideNotFound();
       return createCards(products);
     }
 
@@ -171,6 +188,12 @@ async function searchBar() {
       }
     });
 
+    if (!filteredProducts.length) {
+      console.log('no prod');
+      return showNotFound();
+    }
+
+    hideNotFound();
     createCards(filteredProducts);
   });
 }
