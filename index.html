@@ -7,8 +7,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Itacolomi Restaurante</title>
 
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
   <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/style.css">
+
 </head>
 
 <body>
@@ -33,7 +36,6 @@
   <div class="search">
     <div class="search__products">
       <img src="assets/images/Bag.svg" alt="Sacola de compras" class="search__products--image">
-
       <div class="search__products--text">
         Produtos cadastrados
       </div>
@@ -47,26 +49,21 @@
     </div>
 
     <div class="search__ordenation">
-      <div class="search__ordenation--button">
-        <div class="search__ordenation--text">
-          Ordenar por (1)
-        </div>
-        <div class="search__ordenation-icon">
-          <img src="/assets/images/Arrow_up.svg" alt="">
-        </div>
-      </div>
-      <div class="search__ordenation--content">
-        <a href="#">
+      <select class="search__ordenation--content search__orderBy">
+        <option value="">
+          Ordenar por
+        </option>
+        <option value="greater">
           Maior preço
-        </a>
-        <a href="#">
+        </option>
+        <option value="lower">
           Menor preço
-        </a>
-      </div>
+        </option>
+      </select>
     </div>
   </div>
 
-  <main class="main">
+  <div class="main">
     <div class="main__notfound">
       <div class="main__notfound-image">
         <img src="/assets/images/Leaf.svg" alt="">
@@ -84,7 +81,21 @@
         Cadastrar Produtos
       </a>
     </div>
+  </div>
+
+  <main class="main__card">
+
+    <div class="main__cards">
+
+    </div>
+
   </main>
+
+  <div class="main__card--button">
+    <a href="registro.html" class="main__cards--button">
+      Cadastrar mais produtos
+    </a>
+  </div>
 
   <footer class="footer">
     <div class="footer__content">
@@ -93,7 +104,7 @@
           2022 | <span class="footer__span">Usemobile.</span> Todos direitos reservados.
         </p>
   </footer>
-  <script src="/script/script.js"></script>
+  <script src="/assets/script/main.js"></script>
 </body>
 
 </html>
